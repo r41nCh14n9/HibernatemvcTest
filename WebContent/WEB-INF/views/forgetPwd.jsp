@@ -22,7 +22,7 @@
 				<td><form:input path="smail" /></td>
 			</tr>
 			<tr>
-				<td><a href="/SpringmvcTest/home">返回</a></td>
+				<td><a href="/HibernatemvcTest/home">返回</a></td>
 				<td><form:button type="submit">重設密碼</form:button></td>
 			</tr>
 			<tr>

@@ -45,7 +45,7 @@
 			
 			<tr></tr>
 			<tr>
-				<td><a href="/SpringmvcTest/home">Home</a></td>
+				<td><a href="/HibernatemvcTest/home">Home</a></td>
 				<td><form:button type="submit">Sign up</form:button></td>
 			</tr>
 		</table>

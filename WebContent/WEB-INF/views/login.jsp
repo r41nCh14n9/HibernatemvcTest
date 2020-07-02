@@ -26,7 +26,7 @@
 					<td><form:button type="submit">Sign in</form:button></td>
 				</tr>
 				<tr>
-					<td colspan="2"><a href="/SpringmvcTest/home">Home</a></td>
+					<td colspan="2"><a href="/HibernatemvcTest/home">Home</a></td>
 				</tr>
 				
 		</table>
