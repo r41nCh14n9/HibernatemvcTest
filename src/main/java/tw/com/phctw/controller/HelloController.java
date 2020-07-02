@@ -34,9 +34,19 @@ public class HelloController {
 //		System.out.println(service.updateStudent(student));
 		
 		//delete
-		Long sid = 1l; 
-		System.out.println(service.deleteStudentBySid(sid));
+//		Long sid = 1l; 
+//		System.out.println(service.deleteStudentBySid(sid));
 		
+		String sacc = "PHCTWSTUDENT000003";
+		String spwd = "123456";
+		Student student = new Student();
+		student.setSacc(sacc);
+		student.setSpwd(spwd);
+		System.out.println("check : "+service.validateStudent(student));
+		
+//		System.out.println("sacc = " + sacc);
+//		boolean exist = service.checkSaccExist(sacc);
+//		System.out.println("check : "+exist);
 		
 		return "hello";
 	}

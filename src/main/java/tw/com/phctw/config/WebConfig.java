@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan(basePackages={"tw.com.phctw.*"})
+@ComponentScan(basePackages={"tw.com.phctw.controller"})
 public class WebConfig extends WebMvcConfigurerAdapter{
 	
     @Bean

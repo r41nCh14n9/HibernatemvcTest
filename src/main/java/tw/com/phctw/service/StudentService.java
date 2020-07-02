@@ -14,7 +14,7 @@ import tw.com.phctw.model.Student;
 import tw.com.phctw.util.ForgetPwdMail;
 import tw.com.phctw.util.VerificationMail;
 
-@Service
+@Service(value = "studentService")
 @Transactional
 public class StudentService {
 
@@ -106,7 +106,7 @@ public class StudentService {
 
 		student.setSpwd(encPwd);
 		
-		if (dao.insertStudent(student)) {
+		if (dao.updateStudent(student)) {
 			fpm.send(toAddr, newPwd);
 			return true;
 		} else {

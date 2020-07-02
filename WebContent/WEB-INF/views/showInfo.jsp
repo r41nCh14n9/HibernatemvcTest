@@ -22,14 +22,14 @@
 		</tr>
 		<c:forEach var="student" items="${students}">
 			<tr>
-				<td>${student.sno}</td>
+				<td>${student.sid}</td>
 				<td>${student.sname}</td>
 				<td>${student.sbday}</td> 
 				<td>${student.ssex == 1? '男':'女'}</td>
 				<td>${student.sacc}</td>
 				<td>${student.smail}</td>
 				<td>${student.spwd}</td>
-				<td>${student.confirm == 1? '是':'否'}</td>
+<%-- 				<td>${student.confirm == 1? '是':'否'}</td> --%>
 			</tr>
 		</c:forEach>
 	</table>

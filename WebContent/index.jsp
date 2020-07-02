@@ -7,7 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Spring 4 MVC - HelloWorld Index Page</title>
 		<script>
-			window.location.href = 'home';
+ 			window.location.href = 'home'; 
 		</script>
 		
 	</head>
@@ -15,7 +15,8 @@
 	 	<center>
 			<h2>Hello World</h2>
 			<h3>
-				
+				<a href="hello">Test</a><br>
+				<a href="home">功能頁面</a>
 			</h3>
 		</center>
 	</body>

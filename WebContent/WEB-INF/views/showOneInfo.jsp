@@ -12,7 +12,7 @@
 <table style="text-align: center; width: 50%;" border="1">
 		<tr>
 			<th>學號</th>
-			<td>${student.sno}</td>
+			<td>${student.sid}</td>
 		</tr>
 		<tr>
 			<th>姓名</th>
@@ -41,7 +41,7 @@
 	</table>
 	<table>
 		<tr>
-			<input type ="button" onclick="javascript:location.href='/SpringmvcTest/home'" value="回到 首頁"/><br>
+			<input type ="button" onclick="javascript:location.href='/HibernatemvcTest/home'" value="回到 首頁"/><br>
 		</tr>
 	</table>
 

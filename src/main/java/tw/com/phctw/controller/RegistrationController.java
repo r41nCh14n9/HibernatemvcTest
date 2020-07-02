@@ -20,52 +20,49 @@ import tw.com.phctw.service.StudentService;
 
 @Controller
 public class RegistrationController {
-	
+
 	@Autowired
 	public StudentService service;
-	
+
 	@GetMapping(value = "/register")
 	public ModelAndView showRegister(HttpServletRequest req, HttpServletResponse resp) {
 		ModelAndView mv = new ModelAndView("register");
 		mv.addObject("student", new Student());
-		
+
 		return mv;
 	}
-	
-	@PostMapping(value="/registerProcess")
+
+	@PostMapping(value = "/registerProcess")
 	public ModelAndView addStudent(HttpServletRequest req, HttpServletResponse resp,
-			@ModelAttribute("student")Student student) {
+			@ModelAttribute("student") Student student) {
 		System.out.println("in process...");
 		ModelAndView mv = new ModelAndView();
-		
-		
-		//check if student is exist
-		if(!service.checkSaccExist(student.getSacc())) {
+
+		// check if student is exist
+		if (!service.checkSaccExist(student.getSacc())) {
 			service.register(student);
 			System.out.println(student);
-			//mv = new ModelAndView("redirect:/student/get/"+student.getSno());
-			//mv.addObject("student", student);
+			// mv = new ModelAndView("redirect:/student/get/"+student.getSno());
+			// mv.addObject("student", student);
 			mv = new ModelAndView("redirect:/");
 		} else {
 			mv = new ModelAndView("register");
 			mv.addObject("message", "AccountName or Password is wrong!!");
 		}
-		
-		
+
 		return mv;
 	}
-	
-	@ResponseBody  
-	@PostMapping(value = "/student/isExist", produces = "application/json;charset=UTF-8")   
-	public boolean isExist(Model model,@RequestParam("sacc") String sacc) { 
-		System.out.println(sacc);
-	    boolean exist = service.checkSaccExist(sacc);
-	    System.out.println(exist);
-	    if(exist) {  
-	        return true;  
-	    }  
-	    return false;  
-	} 
 
-	
+	@ResponseBody
+	@PostMapping(value = "/student/isExist", produces = "application/json;charset=UTF-8")
+	public boolean isExist(Model model, @RequestParam("sacc") String sacc) {
+		System.out.println("sacc = " + sacc);
+		boolean exist = service.checkSaccExist(sacc);
+		System.out.println(exist);
+		if (exist) {
+			return true;
+		}
+		return false;
+	}
+
 }

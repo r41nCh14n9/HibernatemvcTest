@@ -58,12 +58,14 @@
 <script>
 	function checkAcc(){
 		var sacc = $("#sacc").val();
+		//console.log(sacc);
 		//用ajax去資料庫匹配
 		$.ajax({ 
-			url:"/SpringmvcTest/student/isExist", //要處理的頁面 
+			url:"/HibernatemvcTest/student/isExist", //要處理的頁面 
 			data:"sacc="+sacc, //要傳過去的數據 
 			type:"post", //提交方式 
 			dataType:"json", //返回的數據類型，TEXT字符串 JSON返回JSON XML返回XML；dataType中T要大寫！！ 
+			//console.log(data);
 			success:function(data){ //回調函數，data為形參，是從login-cl.php頁面返回的值
 				if (data) {
 					$("#msg").html("<font color='red'>用户名已存在</font>");
